@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class MessagesCrypte extends Migration
+class Txtcryptes extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class MessagesCrypte extends Migration
      */
     public function up()
     {
-        Schema::create('messages_crypte', function (Blueprint $table){
+         Schema::create('txtcryptes', function (Blueprint $table){
             $table->increments('id');
             $table->string('author');
             $table->string('message');
@@ -27,6 +27,6 @@ class MessagesCrypte extends Migration
      */
     public function down()
     {
-        Schema::drop('messages_crypte');
+        Schema::drop('txtcryptes');
     }
 }

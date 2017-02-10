@@ -17,6 +17,6 @@ Route::get('/', function () {
 Route::get('/edit', function (){
 	return view('edit/edit');
 });
-Route::get('/show', function (){
-return view('show/show');
-});
+Route::get('/show', 'TxtcrypteController@getShow');
+
+Route::post('/edit/edit/new', 'TxtcrypteController@ajoutMessage');

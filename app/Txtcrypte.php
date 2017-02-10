@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Message_crypte extends Model
+class Txtcrypte extends Model
 {
-    //
+    public $timestamps = false;
 }
