@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>show message codé</h1>
+<h1>show message non codé</h1>
 <br>
 <br>
 <br>

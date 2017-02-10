@@ -20,3 +20,7 @@ Route::get('/edit', function (){
 Route::get('/show', 'TxtcrypteController@getShow');
 
 Route::post('/edit/edit/new', 'TxtcrypteController@ajoutMessage');
+
+Route::get('/crypte','TxtcrypteController@getCrypte');
+
+Route::post('/crypte', 'TxtcrypteController@decalage');

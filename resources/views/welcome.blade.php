@@ -8,11 +8,13 @@
 <body>
 
 
-    <div class="ui three item menu">
+    <div class="ui four item menu">
         <a class="item" href="/">Home</a>
         <a class="item" href="/edit">ajout</a>
         <a class="item" href="/show">message</a>
+        <a class="item" href="/crypte">codé</a>
     </div>
+
 
 
     @yield('content')
