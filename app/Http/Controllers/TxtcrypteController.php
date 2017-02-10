@@ -21,12 +21,13 @@ class TxtcrypteController extends Controller
 	}
 	public function getCrypte(){
 		$messages = Txtcrypte::all();
-		return view('crypte.crypte', ['message'=>$messages]);
+		$Clef = 0;
+		return view('crypte.crypte', ['message'=>$messages, 'Clef'=>$Clef]);
 
 	}
 	public function decalage(Request $request){
 		$messages = Txtcrypte::all();
-		$Clef=$request->decalage;
+		$Clef = $request->decalage;
 		return view('crypte.crypte',['Clef'=>$Clef ,'message'=>$messages]);
 	}
 }
