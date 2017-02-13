@@ -8,9 +8,29 @@ use App\Txtcrypte;
 class TxtcrypteController extends Controller
 {
 	public function ajoutMessage(Request $request){
+		
+		$décalage = $request->decalage;
+		$arr = str_split($request->message,1);
+		$arr2 = range('a','z');
+		$chiffre = "";
+
+
+		foreach ($arr as $value) {
+
+			$val = $value;
+			$val3 = array_search($val,$arr2);
+			$pos = ($val3 +$décalage) %25;
+			$val = $arr2[$pos];
+			$chiffre .= $val;
+
+		}
+
 		$message = new Txtcrypte();
 		$message->author = $request->author;
-		$message->message = $request->message;
+		$message->message = $chiffre;
+		$message->decalage = $request->decalage;
+		
+
 		$message->save();
 		return back();
 	}
@@ -29,5 +49,11 @@ class TxtcrypteController extends Controller
 		$messages = Txtcrypte::all();
 		$Clef = $request->decalage;
 		return view('crypte.crypte',['Clef'=>$Clef ,'message'=>$messages]);
+	}
+
+	public function getDelete($id){
+		$messages = Txtcrypte::find($id);
+		$messages->delete();
+		return back();
 	}
 }

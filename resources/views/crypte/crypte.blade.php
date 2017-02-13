@@ -48,7 +48,6 @@ for ( $i=0; $i<$MsgLen; $i++ )
 }
 
 ?>
-<h6>{{$value->message}}</h6>
 <h3>message : {{$value->id}}  :  {{$Msg}} </h3>
 
 @endforeach

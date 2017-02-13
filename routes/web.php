@@ -24,3 +24,5 @@ Route::post('/edit/edit/new', 'TxtcrypteController@ajoutMessage');
 Route::get('/crypte','TxtcrypteController@getCrypte');
 
 Route::post('/crypte', 'TxtcrypteController@decalage');
+
+Route::post('/{id}', 'TxtcrypteController@getDelete');

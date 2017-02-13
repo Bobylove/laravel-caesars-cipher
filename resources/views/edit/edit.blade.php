@@ -12,6 +12,10 @@
 	<input type="text" name="author" id="author">
 	<br>
 	<br>
+	<label for="decalage">Décalage</label>
+	<input type="number" name="decalage" id="decalage">
+	<br>
+	<br>
 	<h5><label for="message">message</label></h5>
 	<input type="text" name="message" id="message">
 	<br>
